@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact demo | Snackline Demo</title>
+  <meta name="description" content="Explore fictional contact details and try a validated contact form. This portfolio demo sends no messages.">
+  <meta property="og:title" content="Contact demo | Snackline Demo">
+  <meta property="og:description" content="Explore fictional contact details and try a validated contact form. This portfolio demo sends no messages.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://georgio-aa.github.io/demo-ordering-site/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#254d3b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/contact.js"></script>
+</head>
+<body>
+  <main id="main" class="container section" tabindex="-1">
+    <span class="eyebrow">Try the contact experience</span><h1>Contact demo</h1><p>These are placeholder details for a fictional business. There is no real shop or support inbox.</p>
+    <div class="contact-grid">
+      <section aria-labelledby="details-title"><h2 id="details-title">Demo contact details</h2><address class="contact-details">123 Demo Street, Example City<br><a href="mailto:hello@snackline.example">hello@snackline.example</a><br>+000 00 000 000</address><h3>Simulated opening hours</h3><p>Monday-Friday: 9:00 am-5:00 pm<br>Saturday: 9:00 am-1:00 pm<br>Sunday: closed</p><p class="hint">These hours are invented for the demo. No location operates on this schedule.</p></section>
+      <section aria-labelledby="contact-title"><h2 id="contact-title">Try a message</h2><p id="contact-notice">Use fictional details to try the form. This demo stays in your browser; nothing is sent.</p>
+        <form id="contact-form" aria-describedby="contact-notice" novalidate>
+          <div class="form-field"><label for="full-name">Name (required)</label><input id="full-name" name="fullName" autocomplete="name" required minlength="2" aria-describedby="full-name-error"><p id="full-name-error" class="error"></p></div>
+          <div class="form-field"><label for="email">Email (required)</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><p id="email-error" class="error"></p></div>
+          <div class="form-field"><label for="message">Message (required)</label><textarea id="message" name="message" required aria-describedby="message-error"></textarea><p id="message-error" class="error"></p></div>
+          <button id="submit-contact" class="button" type="submit" disabled>Try demo submission</button>
+        </form>
+        <p id="contact-success" class="hint" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p>Enable JavaScript to try the demo contact form. Nothing is sent.</p></noscript>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

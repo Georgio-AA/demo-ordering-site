@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue | Snackline Demo</title>
+  <meta name="description" content="Browse fictional snacks and drinks with retail and wholesale demo pricing.">
+  <meta property="og:title" content="Catalogue | Snackline Demo">
+  <meta property="og:description" content="Explore fictional snacks and drinks by the unit or case.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://georgio-aa.github.io/demo-ordering-site/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#254d3b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/catalogue.js"></script>
+</head>
+<body>
+  <main id="main" class="container section" tabindex="-1">
+    <span class="eyebrow">Meet the range</span><h1>The catalogue</h1><p>Choose individual units in retail or cases in wholesale.</p>
+    <div class="catalogue-controls"><div><label for="search">Search products</label><input id="search" type="search" placeholder="Search names or descriptions"></div><div><label for="sort">Sort by</label><select id="sort"><option value="featured">Featured</option><option value="low">Price low-high</option><option value="high">Price high-low</option><option value="name">Name A-Z</option></select></div></div>
+    <div id="categories" class="category-chips" role="group" aria-label="Filter by category"></div>
+    <p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p><div id="products" class="cards-grid"></div>
+    <div id="empty-results" class="empty-state" hidden><h2>No products found</h2><p>Try another search or category.</p><button id="clear-filters" class="button" type="button">Clear filters</button></div>
+    <noscript><p>Enable JavaScript to browse products and use the demo cart.</p></noscript>
+  </main>
+</body>
+</html>

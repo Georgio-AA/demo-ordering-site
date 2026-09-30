@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart & order request | Snackline Demo</title>
+  <meta name="description" content="Review your demo cart and try a simulated order request. No payment is taken and nothing is sent.">
+  <meta property="og:title" content="Cart & order request | Snackline Demo">
+  <meta property="og:description" content="Try a fictional retail or wholesale order request. No payments or real orders.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://georgio-aa.github.io/demo-ordering-site/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#254d3b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/cart.js"></script>
+</head>
+<body>
+  <main id="main" class="container section" tabindex="-1">
+    <div id="shopping-view">
+      <span class="eyebrow">Your selection</span><h1>Your cart</h1><p id="mode-notice"></p>
+      <div id="empty-cart" class="empty-state" hidden><h2>Your cart is empty</h2><p>A little crunch or a refreshing sip?</p><a class="button" href="catalogue.html">Browse the catalogue</a></div>
+      <section id="cart-content" aria-label="Cart items" hidden><ul id="cart-lines" class="cart-lines"></ul><div class="cart-totals"><p id="subtotal" class="product-price" aria-live="polite" aria-atomic="true"></p><button id="clear-cart" class="button secondary" type="button">Clear cart</button></div></section>
+      <section id="checkout" class="checkout" aria-labelledby="checkout-title" hidden>
+        <h2 id="checkout-title">Order request</h2><p id="demo-notice">No payment is taken — this sends an order request only (demo)</p><p>This demo stays in your browser. Nothing is sent.</p>
+        <form id="order-form" novalidate aria-describedby="demo-notice minimum-notice">
+          <div class="form-field"><label for="full-name">Full name (required)</label><input id="full-name" name="fullName" autocomplete="name" required minlength="2" aria-describedby="full-name-error"><p id="full-name-error" class="error"></p></div>
+          <div class="form-field"><label for="phone">Phone (required)</label><input id="phone" name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="20" aria-describedby="phone-error"><p id="phone-error" class="error"></p></div>
+          <div class="form-field"><label for="email">Email (required)</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><p id="email-error" class="error"></p></div>
+          <div class="form-field"><label for="address">Delivery address (required)</label><textarea id="address" name="address" autocomplete="street-address" required minlength="5" aria-describedby="address-error"></textarea><p id="address-error" class="error"></p></div>
+          <div class="form-field"><label for="notes">Notes (optional)</label><textarea id="notes" name="notes" maxlength="500" aria-describedby="notes-count notes-error"></textarea><p id="notes-count" class="hint">0 / 500 characters</p><p id="notes-error" class="error"></p></div>
+          <p id="minimum-notice" role="status" aria-live="polite"></p><button id="submit-order" class="button" type="submit">Send demo order request</button>
+        </form>
+      </section>
+    </div>
+    <section id="confirmation" aria-labelledby="confirmation-title" hidden><h1 id="confirmation-title" tabindex="-1">Order request received</h1><p id="confirmation-reference"></p><p id="confirmation-customer"></p><p>This is a demo. Nothing was sent and no payment was taken.</p><h2>Your order summary</h2><p id="confirmation-mode"></p><ul id="confirmation-items" class="summary-items"></ul><p id="confirmation-total" class="product-price"></p><a class="button" href="catalogue.html">Back to catalogue</a></section>
+    <noscript><p>Enable JavaScript to review your cart and try the demo order form.</p></noscript>
+  </main>
+</body>
+</html>

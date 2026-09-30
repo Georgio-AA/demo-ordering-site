@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About the project | Snackline Demo</title>
+  <meta name="description" content="Learn about Snackline Demo, a fictional distributor created as a portfolio demo of a small-business ordering site.">
+  <meta property="og:title" content="About the project | Snackline Demo">
+  <meta property="og:description" content="Learn about Snackline Demo, a fictional distributor created as a portfolio demo of a small-business ordering site.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://georgio-aa.github.io/demo-ordering-site/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#254d3b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module">import { renderChrome } from "./js/ui.js"; renderChrome();</script>
+</head>
+<body>
+  <main id="main" class="container section" tabindex="-1">
+    <span class="eyebrow">About the project</span><h1>A fictional business. A working demo.</h1>
+    <p>Snackline Demo is a fictional snack and beverage distributor created as a portfolio demo of a small-business ordering site. It is not a real store: no products are sold, no orders are sent and no payments are taken.</p>
+    <section class="section" aria-labelledby="business-title"><h2 id="business-title">What the fictional business does</h2><p>The imagined distributor supplies snacks and drinks, from chips and cookies to juice and sparkling water. Its catalogue lets individual shoppers explore units and shop owners explore cases for their shelves.</p></section>
+    <section aria-labelledby="ordering-title"><h2 id="ordering-title">Retail and wholesale ordering</h2><p>Retail is the default: prices are per unit and cart quantities count individual units. To try wholesale, use the pricing button and enter the demo code <strong>WHOLESALE2026</strong>. The code ignores letter case and surrounding spaces.</p><p>Wholesale prices are per case, with each product showing its case size. Cart quantities count cases and the demo checkout requires a minimum total of $150. Switching modes keeps your cart quantities and recalculates prices, so review your basket after switching. You can return to retail without a code.</p><p>Checkout validates your details and shows a simulated confirmation in your browser. Nothing is sent.</p></section>
+    <section class="section" aria-labelledby="features-title"><h2 id="features-title">What this demo shows</h2><ul class="summary-items"><li>A catalogue with search and category filters.</li><li>A persistent cart saved in your browser with localStorage.</li><li>Wholesale pricing logic with case quantities, a demo access code and a minimum order.</li><li>A validated order form with inline feedback and a simulated confirmation.</li><li>A responsive and accessible static site with labelled controls, keyboard navigation and visible focus styles.</li></ul><a class="button" href="catalogue.html">Explore the catalogue</a></section>
+  </main>
+</body>
+</html>
